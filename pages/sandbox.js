@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import Head from 'next/head';
 import withRedux from 'next-redux-wrapper';
 import { Button } from 'react-bootstrap';
@@ -23,8 +24,8 @@ export default withRedux(initStore)(() => (
 
 class DemoLoader extends React.PureComponent {
     static propTypes = {
-        loaderDelay: React.PropTypes.number.isRequired,
-        apiDelay: React.PropTypes.number.isRequired
+        loaderDelay: PropTypes.number.isRequired,
+        apiDelay: PropTypes.number.isRequired
     }
 
     state = {
@@ -71,10 +72,10 @@ class DemoLoader extends React.PureComponent {
 
 class DelayedLoader extends React.PureComponent {
     static propTypes = {
-        loader: React.PropTypes.element.isRequired,
-        loading: React.PropTypes.bool,
-        children: React.PropTypes.any,
-        delay: React.PropTypes.number
+        loader: PropTypes.element.isRequired,
+        loading: PropTypes.bool,
+        children: PropTypes.any,
+        delay: PropTypes.number
     }
 
     static defaultProps = {
